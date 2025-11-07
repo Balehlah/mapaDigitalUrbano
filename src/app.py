@@ -1,29 +1,57 @@
-import os
 import streamlit as st
+import reportar
 import pandas as pd
 import folium
 from streamlit_folium import st_folium
+import os
 
-# Caminho base do projeto (um nível acima da pasta src)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+st.set_page_config(page_title="Mapa Digital Urbano", layout="wide")
 
-# Caminho completo do CSV
-CSV_PATH = os.path.join(BASE_DIR, "data", "raw", "ocorrencias_mock.csv")
+# ------------------- MENU -------------------
+st.sidebar.title("Navegação")
+pagina = st.sidebar.radio("Ir para:", ["Mapa", "Reportar Problema"])
 
-st.write("Lendo arquivo:", CSV_PATH)   # debug opcional
 
-df = pd.read_csv(CSV_PATH, encoding="latin1")
+# ------------------- PÁGINA MAPA -------------------
+if pagina == "Mapa":
 
-st.title("Mapa Digital Urbano – Ocorrências")
+    st.title("Mapa de Ocorrências Urbanas")
 
-# Criar mapa centralizado
-m = folium.Map(location=[df["latitude"].mean(), df["longitude"].mean()], zoom_start=13)
+    # Caminho correto do CSV
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    CSV_PATH = os.path.join(BASE_DIR, "data", "raw", "ocorrencias_mock.csv")
 
-# Plotar pontos
-for _, row in df.iterrows():
-    folium.Marker(
-        [row["latitude"], row["longitude"]],
-        popup=f"{row.get('tipo', 'Sem tipo')} - {row.get('descricao', 'Sem descrição')}"
-    ).add_to(m)
+    df = pd.read_csv(CSV_PATH, encoding="latin1")
 
-st_folium(m, width=900, height=600)
+    # Criar mapa centralizado nos dados
+    m = folium.Map(
+        location=[df["latitude"].mean(), df["longitude"].mean()],
+        zoom_start=13
+    )
+
+    # Adicionar marcadores
+    for _, row in df.iterrows():
+        tipo = row.get("tipo_ocorrencia", "Sem tipo")
+        descricao = row.get("descricao", "Sem descrição")
+        bairro = row.get("bairro", "Sem bairro")
+        data = row.get("data", "Sem data")
+
+        popup_text = f"""
+        <b>Tipo:</b> {tipo}<br>
+        <b>Descrição:</b> {descricao}<br>
+        <b>Bairro:</b> {bairro}<br>
+        <b>Data:</b> {data}
+        """
+
+        folium.Marker(
+            [row["latitude"], row["longitude"]],
+            popup=popup_text,
+            tooltip=tipo
+        ).add_to(m)
+
+    st_folium(m, width=900, height=600)
+
+
+# ------------------- PÁGINA REPORTAR -------------------
+elif pagina == "Reportar Problema":
+    reportar.main()
