@@ -18,8 +18,8 @@ from config import APP_CONFIG
 from components.ui_components import aplicar_estilos_customizados, render_header
 from data_manager import data_manager
 
-# Imports das páginas
-from pages import mapa, reportar, dashboard, sobre
+# Imports das views (páginas)
+from views import mapa, reportar, dashboard, sobre
 
 # ==================== CONFIGURAÇÃO DA PÁGINA ====================
 st.set_page_config(
