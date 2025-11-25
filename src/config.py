@@ -36,35 +36,35 @@ TIPOS_OCORRENCIA = {
         "icone": "road",
         "descricao": "Buracos e irregularidades no asfalto"
     },
-    "Iluminação": {
+    "Iluminacao": {
         "cor": "#f39c12",
         "icone": "lightbulb",
-        "descricao": "Problemas com iluminação pública"
+        "descricao": "Problemas com iluminacao publica"
     },
     "Lixo": {
         "cor": "#27ae60",
         "icone": "trash",
-        "descricao": "Acúmulo de lixo ou entulho"
+        "descricao": "Acumulo de lixo ou entulho"
     },
     "Alagamento": {
         "cor": "#3498db",
         "icone": "water",
         "descricao": "Pontos de alagamento"
     },
-    "Calçada": {
+    "Calcada": {
         "cor": "#9b59b6",
         "icone": "shoe-prints",
-        "descricao": "Problemas em calçadas"
+        "descricao": "Problemas em calcadas"
     },
-    "Sinalização": {
+    "Sinalizacao": {
         "cor": "#1abc9c",
         "icone": "signs-post",
-        "descricao": "Sinalização danificada ou ausente"
+        "descricao": "Sinalizacao danificada ou ausente"
     },
-    "Árvore": {
+    "Arvore": {
         "cor": "#2d5016",
         "icone": "tree",
-        "descricao": "Árvores caídas ou com risco"
+        "descricao": "Arvores caidas ou com risco"
     },
     "Outro": {
         "cor": "#7f8c8d",
@@ -76,7 +76,7 @@ TIPOS_OCORRENCIA = {
 # Status das ocorrências
 STATUS_OCORRENCIA = {
     "Pendente": {"cor": "#e74c3c", "icone": "⏳"},
-    "Em Análise": {"cor": "#f39c12", "icone": "🔍"},
+    "Em Analise": {"cor": "#f39c12", "icone": "🔍"},
     "Em Andamento": {"cor": "#3498db", "icone": "🔧"},
     "Resolvido": {"cor": "#27ae60", "icone": "✅"},
     "Arquivado": {"cor": "#7f8c8d", "icone": "📁"}
@@ -85,9 +85,9 @@ STATUS_OCORRENCIA = {
 # Prioridades
 PRIORIDADES = {
     "Baixa": {"cor": "#27ae60", "peso": 1},
-    "Média": {"cor": "#f39c12", "peso": 2},
+    "Media": {"cor": "#f39c12", "peso": 2},
     "Alta": {"cor": "#e67e22", "peso": 3},
-    "Crítica": {"cor": "#e74c3c", "peso": 4}
+    "Critica": {"cor": "#e74c3c", "peso": 4}
 }
 
 # Bairros de Cacoal (expandido)

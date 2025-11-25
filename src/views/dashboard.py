@@ -233,7 +233,7 @@ def render():
             })
             
             # Ordenar por peso
-            ordem = ["Baixa", "Média", "Alta", "Crítica"]
+            ordem = ["Baixa", "Media", "Alta", "Critica"]
             df_prioridade["ordem"] = df_prioridade["Prioridade"].map(
                 {p: i for i, p in enumerate(ordem)}
             )
@@ -258,7 +258,7 @@ def render():
     with col2:
         st.markdown("#### 🚨 Atenção Necessária")
         
-        criticas = stats["por_prioridade"].get("Crítica", 0)
+        criticas = stats["por_prioridade"].get("Critica", 0)
         altas = stats["por_prioridade"].get("Alta", 0)
         
         if criticas > 0:
@@ -276,7 +276,7 @@ def render():
             peso_total = (
                 criticas * 4 + 
                 altas * 3 + 
-                stats["por_prioridade"].get("Média", 0) * 2 + 
+                stats["por_prioridade"].get("Media", 0) * 2 + 
                 stats["por_prioridade"].get("Baixa", 0)
             )
             indice = (peso_total / (total * 4)) * 100

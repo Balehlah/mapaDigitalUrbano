@@ -91,8 +91,8 @@ def render():
             prioridade = st.select_slider(
                 "Prioridade *",
                 options=list(PRIORIDADES.keys()),
-                value="Média",
-                help="Baixa: não urgente | Média: pode esperar | Alta: precisa atenção | Crítica: risco imediato"
+                value="Media",
+                help="Baixa: nao urgente | Media: pode esperar | Alta: precisa atencao | Critica: risco imediato"
             )
             
             # Mostrar cor da prioridade
@@ -126,7 +126,7 @@ def render():
             st.markdown("#### 👤 Identificação (opcional)")
             nome_usuario = st.text_input(
                 "Seu nome",
-                placeholder="Anônimo",
+                placeholder="Anonimo",
                 max_chars=100
             )
             
@@ -186,7 +186,7 @@ def render():
                             bairro=bairro,
                             prioridade=prioridade,
                             fotos=paths_fotos,
-                            usuario=nome_usuario.strip() or "Anônimo"
+                            usuario=nome_usuario.strip() or "Anonimo"
                         )
                         
                         st.success("🎉 Ocorrência registrada com sucesso!")
@@ -240,9 +240,9 @@ def render():
             
             st.markdown("""
             **⚡ Prioridade Correta**
-            - **Crítica:** Risco à vida (buraco profundo, fiação exposta)
-            - **Alta:** Precisa atenção urgente
-            - **Média:** Pode ser resolvido normalmente
-            - **Baixa:** Melhoria desejável
+            - **Critica:** Risco a vida (buraco profundo, fiacao exposta)
+            - **Alta:** Precisa atencao urgente
+            - **Media:** Pode ser resolvido normalmente
+            - **Baixa:** Melhoria desejavel
             """)
 

@@ -110,7 +110,7 @@ def criar_popup_ocorrencia(row: pd.Series) -> folium.Popup:
     bairro = row.get("bairro", "Não informado")
     data = row.get("data", "Não informada")
     status = row.get("status", "Pendente")
-    prioridade = row.get("prioridade", "Média")
+    prioridade = row.get("prioridade", "Media")
     votos = row.get("votos", 0)
     
     # Formatar data
@@ -124,9 +124,9 @@ def criar_popup_ocorrencia(row: pd.Series) -> folium.Popup:
     
     prioridade_cores = {
         "Baixa": "#27ae60",
-        "Média": "#f39c12",
+        "Media": "#f39c12",
         "Alta": "#e67e22",
-        "Crítica": "#e74c3c"
+        "Critica": "#e74c3c"
     }
     cor_prioridade = prioridade_cores.get(prioridade, "#7f8c8d")
     

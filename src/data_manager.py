@@ -32,7 +32,7 @@ class DataManager:
             return pd.DataFrame()
         
         try:
-            df = pd.read_csv(OCORRENCIAS_CSV, encoding="latin1")
+            df = pd.read_csv(OCORRENCIAS_CSV, encoding="utf-8")
             # Normalizar nomes de colunas
             df.columns = df.columns.str.lower().str.strip()
             
@@ -44,7 +44,7 @@ class DataManager:
             if "status" not in df.columns:
                 df["status"] = "Pendente"
             if "prioridade" not in df.columns:
-                df["prioridade"] = "Média"
+                df["prioridade"] = "Media"
             if "fonte" not in df.columns:
                 df["fonte"] = "CSV"
             if "id" not in df.columns:
@@ -111,7 +111,7 @@ class DataManager:
         
         # Preencher valores nulos
         df["status"] = df.get("status", pd.Series(["Pendente"] * len(df))).fillna("Pendente")
-        df["prioridade"] = df.get("prioridade", pd.Series(["Média"] * len(df))).fillna("Média")
+        df["prioridade"] = df.get("prioridade", pd.Series(["Media"] * len(df))).fillna("Media")
         
         return df
     
@@ -122,9 +122,9 @@ class DataManager:
         latitude: float,
         longitude: float,
         bairro: str,
-        prioridade: str = "Média",
+        prioridade: str = "Media",
         fotos: Optional[List[str]] = None,
-        usuario: str = "Anônimo"
+        usuario: str = "Anonimo"
     ) -> Dict[str, Any]:
         """
         Adiciona uma nova ocorrência ao sistema.
@@ -184,7 +184,7 @@ class DataManager:
         
         return False
     
-    def adicionar_comentario(self, id_ocorrencia: str, comentario: str, autor: str = "Anônimo") -> bool:
+    def adicionar_comentario(self, id_ocorrencia: str, comentario: str, autor: str = "Anonimo") -> bool:
         """Adiciona um comentário a uma ocorrência."""
         reportes = self._carregar_reportes()
         
