@@ -1,41 +1,41 @@
-id,tipo_ocorrencia,descricao,latitude,longitude,bairro,data
-1,Buraco,Buraco grande pr�ximo � faixa de pedestres,-11.4312,-61.4541,Centro,2025-10-01
-2,Iluminacao,Poste sem luz na esquina,-11.4384,-61.4497,Centro,2025-10-02
-3,Lixo,Ac�mulo de lixo em �rea p�blica,-11.4421,-61.4512,Vista Alegre,2025-10-03
-4,Alagamento,Ponto de alagamento ap�s chuva,-11.4443,-61.4620,Princesa Isabel,2025-10-03
-5,Cal�ada,Cal�ada quebrada dificultando pedestres,-11.4335,-61.4479,Centro,2025-10-04
-6,Iluminacao,L�mpada piscando constantemente,-11.4462,-61.4554,Green Ville,2025-10-05
-7,Buraco,S�rie de buracos ao longo da rua,-11.4378,-61.4641,Josino Brito,2025-10-06
-8,Lixo,Descarte irregular de entulho,-11.4472,-61.4598,Princesa Isabel,2025-10-06
-9,Alagamento,Trecho que sempre enche de �gua,-11.4520,-61.4682,Liberdade,2025-10-07
-10,Cal�ada,Ra�zes levantando cal�amento,-11.4390,-61.4448,Centro,2025-10-07
-11,Iluminacao,Poste totalmente apagado,-11.4501,-61.4603,Vista Alegre,2025-10-08
-12,Buraco,Buraco profundo causando risco a motos,-11.4533,-61.4721,Liberdade,2025-10-08
-13,Lixo,Lixo acumulado pr�ximo a com�rcio,-11.4405,-61.4429,Centro,2025-10-09
-14,Alagamento,Ac�mulo constante de �gua,-11.4582,-61.4700,Bela Vista,2025-10-10
-15,Cal�ada,Desn�vel perigoso na cal�ada,-11.4417,-61.4456,Centro,2025-10-10
-16,Buraco,Buraco m�dio em rua residencial,-11.4551,-61.4665,Bela Vista,2025-10-11
-17,Iluminacao,Fia��o exposta em poste,-11.4345,-61.4490,Centro,2025-10-12
-18,Lixo,Ponto cr�nico de lixo descartado,-11.4567,-61.4692,Bela Vista,2025-10-12
-19,Cal�ada,Cal�ada inexistente em trecho movimentado,-11.4483,-61.4581,Princesa Isabel,2025-10-13
-20,Alagamento,�rea sempre encharcada,-11.4459,-61.4628,Green Ville,2025-10-13
-21,Iluminacao,Ilumina��o fraca dificultando visibilidade,-11.4492,-61.4555,Princesa Isabel,2025-10-14
-22,Buraco,Buraco largo ocupando metade da pista,-11.4321,-61.4504,Centro,2025-10-14
-23,Lixo,Entulho ao lado de pra�a,-11.4434,-61.4521,Vista Alegre,2025-10-15
-24,Cal�ada,Obst�culo impedindo passagem de cadeirante,-11.4445,-61.4477,Centro,2025-10-15
-25,Alagamento,Bueiro entupido gerando po�a grande,-11.4513,-61.4699,Liberdade,2025-10-16
-26,Iluminacao,Luz fraca pr�ximo a escola,-11.4471,-61.4563,Princesa Isabel,2025-10-17
-27,Buraco,Buraco criando desvio perigoso,-11.4542,-61.4650,Bela Vista,2025-10-17
-28,Lixo,Descartes ap�s obra residencial,-11.4508,-61.4579,Vista Alegre,2025-10-18
-29,Cal�ada,Cal�ada inundada ap�s chuva,-11.4468,-61.4482,Centro,2025-10-19
-30,Alagamento,Rua que sempre acumula �gua,-11.4588,-61.4731,Bela Vista,2025-10-19
-31,Buraco,Buracos pequenos por�m numerosos,-11.4410,-61.4433,Centro,2025-10-20
-32,Lixo,Lixeira p�blica danificada,-11.4437,-61.4498,Vista Alegre,2025-10-20
-33,Iluminacao,Poste sem l�mpada instalada,-11.4555,-61.4688,Bela Vista,2025-10-21
-34,Cal�ada,Degrau irregular causando trope�os,-11.4398,-61.4450,Centro,2025-10-21
-35,Alagamento,Rua estreita totalmente alagada,-11.4601,-61.4710,Bela Vista,2025-10-22
-36,Buraco,Buraco em cruzamento movimentado,-11.4347,-61.4523,Centro,2025-10-22
-37,Iluminacao,Instala��o danificada por temporal,-11.4487,-61.4589,Princesa Isabel,2025-10-23
-38,Lixo,Pilha de lixo em terreno baldio,-11.4526,-61.4624,Vista Alegre,2025-10-23
-39,Cal�ada,Cal�ada com buraco exposto,-11.4361,-61.4445,Centro,2025-10-24
-40,Alagamento,�rea que alaga at� dias sem chuva,-11.4575,-61.4729,Bela Vista,2025-10-25
+id,tipo,descricao,latitude,longitude,bairro,data,status,prioridade,votos
+1,Buraco,Buraco grande próximo à faixa de pedestres causando risco a motoristas,-11.4312,-61.4541,Centro,2025-10-01,Pendente,Alta,12
+2,Iluminação,Poste sem luz na esquina há mais de 2 semanas,-11.4384,-61.4497,Centro,2025-10-02,Em Andamento,Média,8
+3,Lixo,Acúmulo de lixo em área pública próximo à praça,-11.4421,-61.4512,Vista Alegre,2025-10-03,Pendente,Média,5
+4,Alagamento,Ponto de alagamento crítico após qualquer chuva,-11.4443,-61.4620,Princesa Isabel,2025-10-03,Em Análise,Alta,15
+5,Calçada,Calçada quebrada dificultando passagem de pedestres e cadeirantes,-11.4335,-61.4479,Centro,2025-10-04,Resolvido,Média,7
+6,Iluminação,Lâmpada piscando constantemente causando desconforto,-11.4462,-61.4554,Green Ville,2025-10-05,Pendente,Baixa,3
+7,Buraco,Série de buracos ao longo da rua principal do bairro,-11.4378,-61.4641,Josino Brito,2025-10-06,Em Andamento,Alta,18
+8,Lixo,Descarte irregular de entulho de construção,-11.4472,-61.4598,Princesa Isabel,2025-10-06,Pendente,Média,6
+9,Alagamento,Trecho que sempre enche de água mesmo com chuva leve,-11.4520,-61.4682,Liberdade,2025-10-07,Pendente,Alta,11
+10,Calçada,Raízes de árvore levantando calçamento,-11.4390,-61.4448,Centro,2025-10-07,Em Análise,Média,4
+11,Iluminação,Poste totalmente apagado em rua residencial,-11.4501,-61.4603,Vista Alegre,2025-10-08,Resolvido,Média,9
+12,Buraco,Buraco profundo causando risco a motos e bicicletas,-11.4533,-61.4721,Liberdade,2025-10-08,Pendente,Crítica,22
+13,Lixo,Lixo acumulado próximo a comércio há semanas,-11.4405,-61.4429,Centro,2025-10-09,Pendente,Média,7
+14,Alagamento,Acúmulo constante de água por bueiro entupido,-11.4582,-61.4700,Bela Vista,2025-10-10,Em Andamento,Alta,13
+15,Calçada,Desnível perigoso na calçada em frente à escola,-11.4417,-61.4456,Centro,2025-10-10,Pendente,Alta,16
+16,Buraco,Buraco médio em rua residencial causando desvios,-11.4551,-61.4665,Bela Vista,2025-10-11,Pendente,Média,5
+17,Iluminação,Fiação exposta em poste representando risco elétrico,-11.4345,-61.4490,Centro,2025-10-12,Em Análise,Crítica,25
+18,Lixo,Ponto crônico de descarte irregular de lixo,-11.4567,-61.4692,Bela Vista,2025-10-12,Pendente,Média,8
+19,Calçada,Calçada inexistente em trecho movimentado,-11.4483,-61.4581,Princesa Isabel,2025-10-13,Pendente,Alta,10
+20,Alagamento,Área sempre encharcada dificultando passagem,-11.4459,-61.4628,Green Ville,2025-10-13,Pendente,Média,6
+21,Iluminação,Iluminação fraca dificultando visibilidade à noite,-11.4492,-61.4555,Princesa Isabel,2025-10-14,Pendente,Média,4
+22,Buraco,Buraco largo ocupando metade da pista,-11.4321,-61.4504,Centro,2025-10-14,Em Andamento,Crítica,28
+23,Lixo,Entulho abandonado ao lado de praça pública,-11.4434,-61.4521,Vista Alegre,2025-10-15,Resolvido,Média,6
+24,Calçada,Obstáculo na calçada impedindo passagem de cadeirante,-11.4445,-61.4477,Centro,2025-10-15,Em Análise,Alta,14
+25,Alagamento,Bueiro entupido gerando poça grande,-11.4513,-61.4699,Liberdade,2025-10-16,Pendente,Alta,9
+26,Iluminação,Luz fraca próximo a escola causando insegurança,-11.4471,-61.4563,Princesa Isabel,2025-10-17,Pendente,Alta,11
+27,Buraco,Buraco criando desvio perigoso em curva,-11.4542,-61.4650,Bela Vista,2025-10-17,Pendente,Alta,15
+28,Lixo,Descartes irregulares após obra residencial,-11.4508,-61.4579,Vista Alegre,2025-10-18,Pendente,Baixa,3
+29,Calçada,Calçada inundada após qualquer chuva,-11.4468,-61.4482,Centro,2025-10-19,Pendente,Média,5
+30,Alagamento,Rua que sempre acumula água impedindo passagem,-11.4588,-61.4731,Bela Vista,2025-10-19,Em Andamento,Alta,17
+31,Buraco,Buracos pequenos porém numerosos em toda extensão,-11.4410,-61.4433,Centro,2025-10-20,Pendente,Média,8
+32,Lixo,Lixeira pública danificada e transbordando,-11.4437,-61.4498,Vista Alegre,2025-10-20,Resolvido,Baixa,4
+33,Iluminação,Poste sem lâmpada instalada há meses,-11.4555,-61.4688,Bela Vista,2025-10-21,Pendente,Média,6
+34,Calçada,Degrau irregular causando tropeços frequentes,-11.4398,-61.4450,Centro,2025-10-21,Pendente,Média,5
+35,Alagamento,Rua estreita totalmente alagada após chuvas,-11.4601,-61.4710,Bela Vista,2025-10-22,Pendente,Alta,12
+36,Buraco,Buraco em cruzamento movimentado,-11.4347,-61.4523,Centro,2025-10-22,Em Análise,Crítica,30
+37,Iluminação,Instalação elétrica danificada por temporal,-11.4487,-61.4589,Princesa Isabel,2025-10-23,Em Andamento,Alta,14
+38,Lixo,Pilha de lixo em terreno baldio atraindo animais,-11.4526,-61.4624,Vista Alegre,2025-10-23,Pendente,Média,7
+39,Calçada,Calçada com buraco exposto e perigoso,-11.4361,-61.4445,Centro,2025-10-24,Pendente,Alta,9
+40,Alagamento,Área que alaga até em dias sem chuva,-11.4575,-61.4729,Bela Vista,2025-10-25,Pendente,Crítica,21

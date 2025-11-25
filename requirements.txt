@@ -1,4 +1,18 @@
-streamlit
-pandas
-folium
-streamlit-folium
+# Mapa Digital Urbano - Dependências
+# Python >= 3.9
+
+# Framework web
+streamlit>=1.29.0
+
+# Manipulação de dados
+pandas>=2.0.0
+
+# Mapas interativos
+folium>=0.15.0
+streamlit-folium>=0.15.0
+
+# Gráficos e visualizações
+plotly>=5.18.0
+
+# Utilitários
+python-dateutil>=2.8.2
