@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "id": "20251201120000_abc123",
+    "tipo": "Buraco",
+    "descricao": "Buraco grande na entrada do bairro, ja causou acidente com motociclista na semana passada. Precisa de atencao urgente!",
+    "latitude": -11.4325,
+    "longitude": -61.4510,
+    "bairro": "Centro",
+    "status": "Pendente",
+    "prioridade": "Critica",
+    "fotos": [],
+    "usuario": "Maria Silva",
+    "data_envio": "2025-12-01T12:00:00",
+    "data_atualizacao": "2025-12-01T12:00:00",
+    "votos": 15,
+    "comentarios": []
+  },
+  {
+    "id": "20251202093000_def456",
+    "tipo": "Iluminacao",
+    "descricao": "Tres postes apagados na rua principal. Area fica muito escura a noite, causando inseguranca para os moradores.",
+    "latitude": -11.4380,
+    "longitude": -61.4495,
+    "bairro": "Vista Alegre",
+    "status": "Em Analise",
+    "prioridade": "Alta",
+    "fotos": [],
+    "usuario": "Joao Santos",
+    "data_envio": "2025-12-02T09:30:00",
+    "data_atualizacao": "2025-12-02T14:00:00",
+    "votos": 8,
+    "comentarios": [
+      {
+        "texto": "Recebemos a solicitacao e estamos verificando com a equipe de manutencao.",
+        "autor": "Administrador",
+        "data": "2025-12-02T14:00:00"
+      }
+    ]
+  },
+  {
+    "id": "20251203150000_ghi789",
+    "tipo": "Lixo",
+    "descricao": "Terreno baldio virou deposito de lixo irregular. Moradores estao descartando entulho e lixo domestico no local.",
+    "latitude": -11.4450,
+    "longitude": -61.4580,
+    "bairro": "Princesa Isabel",
+    "status": "Em Andamento",
+    "prioridade": "Media",
+    "fotos": [],
+    "usuario": "Ana Costa",
+    "data_envio": "2025-12-03T15:00:00",
+    "data_atualizacao": "2025-12-04T10:00:00",
+    "votos": 12,
+    "comentarios": [
+      {
+        "texto": "Equipe de limpeza agendada para o dia 05/12.",
+        "autor": "Administrador",
+        "data": "2025-12-04T10:00:00"
+      }
+    ]
+  },
+  {
+    "id": "20251204080000_jkl012",
+    "tipo": "Alagamento",
+    "descricao": "Bueiro entupido causa alagamento toda vez que chove. A agua invade as casas da rua.",
+    "latitude": -11.4520,
+    "longitude": -61.4650,
+    "bairro": "Liberdade",
+    "status": "Pendente",
+    "prioridade": "Alta",
+    "fotos": [],
+    "usuario": "Carlos Oliveira",
+    "data_envio": "2025-12-04T08:00:00",
+    "data_atualizacao": "2025-12-04T08:00:00",
+    "votos": 20,
+    "comentarios": []
+  },
+  {
+    "id": "20251130100000_mno345",
+    "tipo": "Calcada",
+    "descricao": "Calcada completamente destruida em frente a escola. Criancas precisam andar pela rua.",
+    "latitude": -11.4400,
+    "longitude": -61.4470,
+    "bairro": "Centro",
+    "status": "Resolvido",
+    "prioridade": "Alta",
+    "fotos": [],
+    "usuario": "Lucia Ferreira",
+    "data_envio": "2025-11-30T10:00:00",
+    "data_atualizacao": "2025-12-03T16:00:00",
+    "votos": 25,
+    "comentarios": [
+      {
+        "texto": "Solicitacao recebida. Priorizando devido a seguranca das criancas.",
+        "autor": "Administrador",
+        "data": "2025-11-30T14:00:00"
+      },
+      {
+        "texto": "Equipe de obras iniciou o reparo.",
+        "autor": "Administrador",
+        "data": "2025-12-02T08:00:00"
+      },
+      {
+        "texto": "Servico concluido. Calcada recuperada.",
+        "autor": "Administrador",
+        "data": "2025-12-03T16:00:00"
+      }
+    ]
+  }
+]

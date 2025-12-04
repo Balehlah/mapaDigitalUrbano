@@ -273,3 +273,7 @@ def render_tipo_badge(tipo: str) -> str:
     </span>
     """
 
+
+
+
+

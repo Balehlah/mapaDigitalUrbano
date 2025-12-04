@@ -19,7 +19,7 @@ from components.ui_components import aplicar_estilos_customizados, render_header
 from data_manager import data_manager
 
 # Imports das views (páginas)
-from views import mapa, reportar, dashboard, sobre
+from views import mapa, reportar, dashboard, sobre, admin
 
 # ==================== CONFIGURAÇÃO DA PÁGINA ====================
 st.set_page_config(
@@ -60,7 +60,7 @@ with st.sidebar:
     # Navegação
     pagina = st.radio(
         "Navegação",
-        ["🗺️ Mapa Interativo", "📣 Reportar Problema", "📊 Dashboard", "ℹ️ Sobre"],
+        ["🗺️ Mapa Interativo", "📣 Reportar Problema", "📊 Dashboard", "ℹ️ Sobre", "🔐 Admin"],
         label_visibility="collapsed"
     )
     
@@ -120,6 +120,9 @@ elif pagina == "📊 Dashboard":
     
 elif pagina == "ℹ️ Sobre":
     sobre.render()
+    
+elif pagina == "🔐 Admin":
+    admin.render()
 
 # ==================== FOOTER ====================
 st.markdown("---")
