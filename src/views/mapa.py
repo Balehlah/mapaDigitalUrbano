@@ -130,14 +130,36 @@ def render():
             st.info("Nenhuma ocorrência corresponde aos filtros selecionados.")
     
     with tab_calor:
-        st.markdown("#### Concentração de Ocorrências")
-        st.markdown("Áreas em vermelho indicam maior concentração de problemas reportados.")
+        st.markdown("#### Concentracao de Ocorrencias")
+        st.markdown("Areas em **vermelho** indicam maior concentracao de problemas. Areas em **azul** indicam menor concentracao.")
         
         if not df_filtrado.empty:
-            mapa_calor = criar_mapa_calor(df_filtrado)
-            st_folium(mapa_calor, width=None, height=550, use_container_width=True)
+            # Centralizar no centro dos dados filtrados
+            center_lat = df_filtrado["latitude"].mean()
+            center_lon = df_filtrado["longitude"].mean()
+            
+            mapa_calor = criar_mapa_calor(df_filtrado, center_lat=center_lat, center_lon=center_lon)
+            st_folium(mapa_calor, width=None, height=550, use_container_width=True, key="mapa_calor")
+            
+            # Legenda
+            st.markdown("""
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 0.5rem;">
+                <span style="display: flex; align-items: center; gap: 0.3rem;">
+                    <span style="width: 20px; height: 12px; background: linear-gradient(to right, blue, cyan); border-radius: 2px;"></span>
+                    Baixa
+                </span>
+                <span style="display: flex; align-items: center; gap: 0.3rem;">
+                    <span style="width: 20px; height: 12px; background: linear-gradient(to right, lime, yellow); border-radius: 2px;"></span>
+                    Media
+                </span>
+                <span style="display: flex; align-items: center; gap: 0.3rem;">
+                    <span style="width: 20px; height: 12px; background: linear-gradient(to right, orange, red); border-radius: 2px;"></span>
+                    Alta
+                </span>
+            </div>
+            """, unsafe_allow_html=True)
         else:
-            st.info("Nenhuma ocorrência corresponde aos filtros selecionados.")
+            st.info("Nenhuma ocorrencia corresponde aos filtros selecionados.")
     
     # ================== LISTA DE OCORRÊNCIAS ==================
     st.markdown("---")

@@ -222,37 +222,61 @@ def adicionar_marcadores(
     return mapa
 
 
-def criar_mapa_calor(df: pd.DataFrame) -> folium.Map:
+def criar_mapa_calor(df: pd.DataFrame, center_lat: Optional[float] = None, center_lon: Optional[float] = None) -> folium.Map:
     """
     Cria um mapa de calor das ocorrências.
     """
-    mapa = criar_mapa_base()
-    
     if df.empty:
-        return mapa
+        return criar_mapa_base()
     
-    # Preparar dados para heatmap
-    heat_data = [
-        [row["latitude"], row["longitude"]]
-        for _, row in df.iterrows()
-        if pd.notna(row.get("latitude")) and pd.notna(row.get("longitude"))
-    ]
+    # Calcular centro baseado nos dados
+    lat = center_lat or df["latitude"].mean()
+    lon = center_lon or df["longitude"].mean()
+    
+    # Criar mapa simples com tile escuro para melhor visualizacao do heatmap
+    mapa = folium.Map(
+        location=[lat, lon],
+        zoom_start=MAP_CONFIG["zoom_start"],
+        tiles="CartoDB dark_matter"
+    )
+    
+    # Preparar dados para heatmap - garantir que sao floats validos
+    heat_data = []
+    for _, row in df.iterrows():
+        try:
+            lat_val = float(row.get("latitude", 0))
+            lon_val = float(row.get("longitude", 0))
+            if lat_val != 0 and lon_val != 0 and pd.notna(lat_val) and pd.notna(lon_val):
+                heat_data.append([lat_val, lon_val])
+        except (ValueError, TypeError):
+            continue
     
     if heat_data:
+        # Adicionar HeatMap com configuracoes otimizadas
         plugins.HeatMap(
             heat_data,
             name="Mapa de Calor",
-            min_opacity=0.3,
-            radius=25,
-            blur=15,
+            min_opacity=0.4,
+            max_opacity=0.9,
+            radius=30,
+            blur=20,
+            max_zoom=18,
             gradient={
                 0.2: 'blue',
-                0.4: 'lime',
+                0.4: 'cyan',
+                0.5: 'lime',
                 0.6: 'yellow',
                 0.8: 'orange',
                 1.0: 'red'
             }
         ).add_to(mapa)
+    
+    # Adicionar controle de tela cheia
+    plugins.Fullscreen(
+        position="topleft",
+        title="Tela Cheia",
+        title_cancel="Sair"
+    ).add_to(mapa)
     
     return mapa
 
